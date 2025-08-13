@@ -1,0 +1,46 @@
+//function is calling inside a function ,sum of 2 nos sum is prime
+#include<stdio.h>
+int prime();
+int add();//for return value we use 'int'
+int main()
+{
+    int z;
+    z=prime();
+    printf("\nprime :%d\n",z);
+    
+   
+}
+int add()
+{
+    int a,b,x;
+    printf("nter a no : \n");
+    scanf("%d%d",&a,&b);
+   int s;
+   s=a+b;
+   return s;
+}
+int prime()
+{
+    int p,f=1,i=2;
+    p=add();
+    
+    while(i<p)
+    {
+        if(p%i==0)
+        {
+        f=0;
+        break;
+        }
+        i++;
+    }
+    if(f)
+    {
+        printf("it is prime");
+    }
+    else
+    {
+        printf("it is not prime");
+    }
+    return p;
+}
+    
